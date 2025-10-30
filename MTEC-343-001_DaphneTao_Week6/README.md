@@ -6,19 +6,19 @@ $BASS:n("<0 -3 -2 -4>".add(-7)).scale("g#:minor").s("wt_digital_crickets")
 .orbit(1)
 .room(2).size(0.5).gain(0.2)
 .slow(2)
-.lpf(slider(1).range(200,6000))
+.lpf(slider(0.475).range(200,6000))
 
-$melody: n(rand.range(0,12).segment(16)).scale("g#:minor").s("wt_digital_crickets")
+$RandNote: n(rand.range(0,12).segment(16)).scale("g#:minor").s("wt_digital_crickets")
 .orbit(2)
 .room(1)
 .adsr("0:.1:.1:.2")
 .lpf(tri.range(100, 600).slow(2)).gain(1)
 
-$BASS2:n("[0 2 4 <6 1>]/0.5".add(14)).scale("g#:minor").s("wt_digital_crickets")
+$melody:n("[0 2 4 <6 1>]/1".add(14)).scale("g#:minor").s("wt_digital_crickets")
 .orbit(3)
 .room(6).size(1.5).gain(0.1)
 .slow(2).pan(rand)
-.lpf(slider(0.626).range(200,6000)).lpenv(1)
+.lpf(slider(0.411).range(200,6000)).lpenv(1)
 .phaser(6).phasersweep("<800 2000 4000 8000>")
 
 ```
